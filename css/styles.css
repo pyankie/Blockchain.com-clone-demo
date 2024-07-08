@@ -60,8 +60,9 @@ p {
 }
 
 body {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", "Roboto", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   font-size: 1.6rem;
   line-height: 2rem;
 }
@@ -200,4 +201,56 @@ a {
 .list-icon {
   width: 32px;
   height: 32px;
+}
+
+/* Buttons */
+
+.btn {
+  border-radius: 8px;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.14px;
+  line-height: 2rem;
+  opacity: 0.75;
+  outline: 0;
+  white-space: nowrap;
+}
+
+.media-btn {
+  padding: 1rem 1.4rem;
+}
+.btn--primary {
+  background: var(--color-primary);
+}
+.btn--secondary {
+  background: var(--color-secondary);
+}
+.btn--accent {
+  background: var(--color-accent);
+}
+.btn--dark {
+  background: #50596b;
+}
+.btn--sign-up {
+  padding: 1rem 1.4rem;
+}
+.btn--outline {
+  color: var(--color-primary);
+  border: 2px solid currentColor;
+  background: transparent;
+  padding: 0.8rem 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .btn {
+    line-height: 2.6rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.18px;
+  }
+  .media-btn {
+    padding: 1.2rem 2.2rem;
+  }
 }
