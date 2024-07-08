@@ -112,3 +112,92 @@ a {
 .badge--secondary:hover {
   background: #d1f0db;
 }
+
+/* Icons */
+.icon {
+  width: 32px;
+  height: 32px;
+  /* overflow: visible; */
+}
+
+.media-icon__title {
+  line-height: 2.5rem;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+
+.media-icon {
+  display: inline-flex;
+  align-items: center;
+  padding: 1.2rem;
+  /* background: #efecfe; */
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .media-icon {
+    padding: 1.6rem;
+  }
+}
+
+.slider-icon {
+  align-items: center;
+  border-radius: calc(2 * var(--sm-border-rad));
+  border: 1px solid currentColor;
+  cursor: pointer;
+  display: inline-flex;
+  padding: 1.1rem;
+}
+.slider-icon--primary {
+  color: var(--color-primary);
+}
+.slider-icon--secondary {
+  color: var(--color-secondary);
+}
+
+.slider-icon--accent {
+  color: var(--color-accent);
+}
+.slider-icon svg {
+  width: 20px;
+  height: 20px;
+  color: inherit;
+}
+
+.slider-icon .arrow--right {
+  transform: rotate(180deg);
+}
+.slider-icon .arrow--left {
+  transform: initial;
+}
+
+.slider-icons__container {
+  display: inline-flex;
+  gap: 1rem;
+}
+.list-icon__container {
+  display: inline-flex;
+  padding: 1.2rem;
+  align-items: center;
+  border-radius: 20px;
+  }
+  
+  .list-icon__container--primary {
+  background: #ecf5fe;
+}
+  .list-icon__container--secondary {
+    background: #efecfe;
+    }
+    .list-icon__container--accent {
+    background: #fff2e5;
+}
+    .list-icon__container--green {
+    background: #e6faec;
+}
+  .list-icon__container--dark {
+  background: #f0f2f7;
+}
+.list-icon {
+  width: 32px;
+  height: 32px;
+}
