@@ -214,9 +214,13 @@ a {
   font-weight: 500;
   letter-spacing: 0.14px;
   line-height: 2rem;
-  opacity: 0.75;
   outline: 0;
   white-space: nowrap;
+  transition: opacity 0.15s;
+}
+
+.btn:hover {
+  opacity: 0.8;
 }
 
 .media-btn {
@@ -234,9 +238,6 @@ a {
 .btn--dark {
   background: #50596b;
 }
-.btn--sign-up {
-  padding: 1rem 1.4rem;
-}
 .btn--outline {
   color: var(--color-primary);
   border: 2px solid currentColor;
@@ -252,5 +253,46 @@ a {
   }
   .media-btn {
     padding: 1.2rem 2.2rem;
+  }
+}
+
+/* Inputs */
+.input-group {
+  display: flex;
+  gap: 1.6rem;
+}
+.input-group .input {
+  display: inline-block;
+  border-radius: calc(2 * var(--sm-border-rad));
+  padding: 1rem 1.4rem;
+  outline: none;
+  font-size: 1.4rem;
+  border: 2px solid transparent;
+  color: #ecfcec;
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 38rem;
+}
+
+::placeholder {
+  color: #ecfcec;
+}
+
+.input:focus {
+  outline: 1px solid #fff;
+  border-color: #8ca1a5;
+}
+
+.input-group .btn--sign-up {
+  line-height: 2rem;
+  color: var(--color-primary);
+  background: #ecf5fe;
+  padding: 1.4rem 1.9rem;
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .input-group .btn--sign-up {
+    padding: 1.4rem 2.6rem;
   }
 }
