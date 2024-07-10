@@ -6,7 +6,6 @@
   --color-secondary: #7349f2;
   --color-accent: #f28b24;
   --color-dark: #121d33;
-  --color-link--hovered: #353f52;
   --color-link: #677185;
   --color-link-hovered: #144699;
   --sm-border-rad: 4px;
@@ -295,4 +294,47 @@ a {
   .input-group .btn--sign-up {
     padding: 1.4rem 2.6rem;
   }
+}
+
+/* Cards */
+
+.card {
+  display: inline-flex;
+  flex-direction: column;
+  width: 25rem;
+  padding: 2rem;
+  line-height: 2.4rem;
+  border-radius: 8px;
+  box-shadow: 12px 24px 64px rgba(103, 113, 133, 0.2);
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.card:hover {
+  /* background: rgba(103, 113, 133, 0.09); */
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(240, 242, 247));
+}
+
+.card__icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.crypto-icon {
+  width: 40px;
+  height: 40px;
+  transform: translateY(-2px);
+}
+
+.card__description {
+  font-weight: 500;
+  margin-top: 2rem;
+}
+.crypto-name > abbr {
+  margin-left: 8px;
+  color: #677185;
+}
+.card .price-margin {
+  color: #00994c;
+  margin-left: 8px;
 }
