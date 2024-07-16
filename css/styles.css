@@ -222,11 +222,11 @@ a {
   line-height: 2rem;
   outline: 0;
   white-space: nowrap;
-  transition: opacity 0.15s;
+  /* transition: opacity 0.15s; */
 }
 
 .btn:hover {
-  opacity: 0.8;
+  /* opacity: 0.8; */
 }
 
 .media-btn {
@@ -507,5 +507,37 @@ a {
   .feature:nth-of-type(odd) .feature__image,
   .feature:nth-of-type(odd) .picture {
     order: 2;
+  }
+}
+
+/* Call-out section */
+.callout {
+  background: url(/images/icons/banner-bg.svg) var(--color-dark) no-repeat left;
+  color: #fff;
+  padding: 4rem 1.6rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+}
+.callout .btn {
+  background: #fff;
+  color: var(--color-primary);
+  transition: background 0.2s;
+}
+.callout .btn:hover {
+  background: #dfe3eb;
+}
+
+@media screen and (min-width: 768px) {
+  .callout {
+    padding: 8rem 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 3.2rem;
+    justify-content: center;
+  }
+  .callout .btn {
+    align-self: flex-end;
   }
 }
