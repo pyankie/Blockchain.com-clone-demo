@@ -541,3 +541,18 @@ a {
     align-self: flex-end;
   }
 }
+
+/* Links list */
+.link-list-wrapper .link-list__heading {
+  font-weight: 600;
+}
+.link-list-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.link-list li a {
+  color: var(--color-link);
+}
+.link-list li {
+  margin-bottom: 1.6rem;
+}
