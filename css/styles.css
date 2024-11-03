@@ -1102,7 +1102,6 @@ a {
   height: 24px;
   border-radius: 5px;
   transition: background 0.2s ease;
-  margin-right: 1rem;
 }
 .nav__icons .icon-bars:hover {
   background: #ffffff1a;
