@@ -365,7 +365,7 @@ a {
   border-radius: 8px;
   box-shadow: 12px 24px 64px rgba(103, 113, 133, 0.2);
   cursor: pointer;
-  margin-right: 15px;
+  background: #fff;
 }
 
 .card:hover {
@@ -374,11 +374,13 @@ a {
 }
 
 .card__icons {
+  text-wrap: nowrap;
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
-.crypto-icon {
+.crypto-icon svg {
   width: 40px;
   height: 40px;
   transform: translateY(-2px);
@@ -389,6 +391,7 @@ a {
   margin-top: 2rem;
 }
 .crypto-name > abbr {
+  text-transform: uppercase;
   margin-left: 8px;
   color: #677185;
 }
@@ -799,6 +802,7 @@ a {
 }
 .nav-menu {
   position: fixed;
+  z-index: 2;
   top: 0;
   width: 100vw;
   height: 100%;
@@ -1037,6 +1041,7 @@ a {
   transform: scale(1, 1);
   opacity: 1;
 }
+
 @media screen and (min-width: 620px) {
   .nav__icons > li:nth-child(n) {
     display: block;
@@ -1046,6 +1051,9 @@ a {
   }
   .nav-menu {
     display: none;
+  }
+  .icon-bars {
+    margin-right: 1rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1113,6 +1121,7 @@ a {
   position: relative;
 }
 .mega-menu {
+  z-index: 1;
   background: #fff;
   display: inline-flex;
   justify-content: space-between;
