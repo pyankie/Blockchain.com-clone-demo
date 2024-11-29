@@ -1,4 +1,5 @@
 ref-styles.css
 images/
 components/rule.css
-bs-config.js package.json
+bs-config.js 
+package.json

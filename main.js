@@ -23,8 +23,6 @@ navMenuCloseIcon.addEventListener("click", () => {
   navMenu.classList.remove("show");
 });
 
-const smallScreens = window.matchMedia("( min-width: 620px )");
-
 const navSearchIconContainer = document.querySelector(
   ".nav__icons .icon-container",
 );
