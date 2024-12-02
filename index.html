@@ -6,394 +6,140 @@
     <link rel="stylesheet" href="css/styles.css" />
     <title>Document</title>
   </head>
-  <body style="background: var(--color-dark)">
-    <header class="header">
-      <nav class="nav">
-        <ul class="nav-page__list">
-          <li>
-            <a href="/" aria-label="Blockchain">
-              <svg class="nav__brand">
-                <use href="images/icons/logo-text.svg#logo"></use>
-              </svg>
-            </a>
-          </li>
-          <li><a class="page-link link--boxed" href="#">Wallet</a></li>
-          <li><a class="page-link link--boxed" href="#">Exchange</a></li>
-          <li><a class="page-link link--boxed" href="#">Explore</a></li>
-          <li><a class="page-link link--boxed" href="#">Pay</a></li>
-          <li><a class="page-link link--boxed" href="#">Institutional</a></li>
-          <li class="mega-li">
-            <span class="icon-ellipsis-container"
-              ><svg class="link--boxed icon-ellipsis">
-                <use href="images/icons/ellipsis.svg#ellipsis"></use></svg
-            ></span>
-            <div class="mega-menu-container">
-              <div class="mega-menu">
-                <div>
-                  <h3 class="mega-menu__list-heading">Product</h3>
-                  <ul class="mega-menu__list">
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">Wallet</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">Exchange</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">Explore</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">pay</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">Institutional</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">Earn</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">Card</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">Learn</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">Prices</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">Charts</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">NFT</a>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 class="mega-menu__list-heading">Resources</h3>
-                  <ul class="mega-menu__list">
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">APIs</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">Status</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">Open Source</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">Research</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">Legal & Privacy</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">Support</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">Blog</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">Security</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">Podcast</a>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 class="mega-menu__list-heading">Company</h3>
-                  <ul class="mega-menu__list">
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">About</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">Careers</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">Press Center</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">Prime</a>
-                    </li>
-                    <li class="mega-menu__list-item">
-                      <a href="#" class="link--boxed">Ventures</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <ul class="nav__icons">
-          <li class="nav__search">
-            <a href="#"
-              ><span class="icon-container"
-                ><svg class="icon nav__icon-search">
-                  <use href="/images/icons/search.svg#search"></use></svg></span
-            ></a>
-            <div class="searchables">
-              <div class="search-block">
-                <div class="search-input-wrapper">
-                  <svg class="search-icon">
-                    <use href="images/icons/search.svg#search"></use>
-                  </svg>
-                  <input
-                    class="input"
-                    type="text"
-                    placeholder="Search blocks, transactions, hash..."
-                  />
-                </div>
-                <div class="block__list-wrapper">
-                  <ul class="block__list">
-                    <h4 class="block__list-heading">Blocks</h4>
-                    <li class="search-item">
-                      <a href="#" class="search-item__link">
-                        <svg class="block-icon">
-                          <use href="images/icons/block.svg#block"></use>
-                        </svg>
-                        BTC Block
-                      </a>
-                    </li>
-                    <li class="search-item">
-                      <a href="#" class="search-item__link">
-                        <svg class="block-icon">
-                          <use href="images/icons/block.svg#block"></use>
-                        </svg>
-                        BCH Block
-                      </a>
-                    </li>
-                    <li class="search-item">
-                      <a href="#" class="search-item__link">
-                        <svg class="block-icon">
-                          <use href="images/icons/block.svg#block"></use>
-                        </svg>
-                        ETH Block
-                      </a>
-                    </li>
-                  </ul>
-                  <ul class="searchable-list">
-                    <li><a class="searchable__item" href="#">Prices</a></li>
-                    <li><a class="searchable__item" href="#">Blocks</a></li>
-                    <li>
-                      <a class="searchable__item" href="#">Transactions</a>
-                    </li>
-                    <li><a class="searchable__item" href="#">Charts</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <button class="btn btn--outline btn--login">Log in</button>
-          </li>
-          <li>
-            <button class="btn btn--sign-up">Sign up</button>
-          </li>
-          <li class="">
-            <svg class="icon icon-bars menu-toggle">
-              <use href="images/icons/bars.svg#bars"></use>
-            </svg>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <div class="nav-menu">
-      <div class="menu__header">
-        <svg class="nav__brand">
-          <use href="images/icons/logo-text.svg#logo"></use>
+  <body style="">
+    <footer class="footer">
+      <div class="sites">
+        <svg class="nav__brand sites__brand-logo">
+          <use href="./images/icons/logo-text.svg#logo"></use>
         </svg>
-        <svg class="nav-menu__close-icon">
-          <use href="images/icons/exit-x-icon.svg#x"></use>
-        </svg>
-      </div>
-      <section class="menu-bar__content-container">
-        <div class="search-block-container">
-          <section class="collapsible search-block menu">
-            <div class="search-input-wrapper">
-              <svg class="search-icon">
-                <use href="images/icons/search.svg#search"></use>
-              </svg>
-              <input
-                class="input"
-                type="text"
-                placeholder="Search blocks, transactions, hash..."
-              />
-            </div>
-            <div class="block__list-wrapper collapsible-content">
-              <ul class="block__list">
-                <h4 class="block__list-heading">Blocks</h4>
-                <li class="search-item">
-                  <a href="#" class="search-item__link">
-                    <svg class="block-icon">
-                      <use href="images/icons/block.svg#block"></use>
-                    </svg>
-                    BTC Block
-                  </a>
-                </li>
-                <li class="search-item">
-                  <a href="#" class="search-item__link">
-                    <svg class="block-icon">
-                      <use href="images/icons/block.svg#block"></use>
-                    </svg>
-                    BCH Block
-                  </a>
-                </li>
-                <li class="search-item">
-                  <a href="#" class="search-item__link">
-                    <svg class="block-icon">
-                      <use href="images/icons/block.svg#block"></use>
-                    </svg>
-                    ETH Block
-                  </a>
-                </li>
-              </ul>
-              <ul class="searchable-list">
-                <li><a class="searchable__item" href="#">Prices</a></li>
-                <li><a class="searchable__item" href="#">Blocks</a></li>
-                <li>
-                  <a class="searchable__item" href="#">Transactions</a>
-                </li>
-                <li><a class="searchable__item" href="#">Charts</a></li>
-              </ul>
-            </div>
-          </section>
+        <div class="separator-line"></div>
+        <div class="social-sites">
+          <a href="#">
+            <img class="img-x" src="images/home/sites/x2.png" alt="" />
+          </a>
+          <a href="#">
+            <img class="img-x" src="images/home/sites/linkedin2.png" alt="" />
+          </a>
+          <a href="#">
+            <img class="img-x" src="images/home/sites/instagram2.png" alt="" />
+          </a>
+          <a href="#">
+            <img class="img-x" src="images/home/sites/facebook2.png" alt="" />
+          </a>
         </div>
-        <section class="collapsible menu-bar__content">
-          <h2 class="menu-bar__list-title">Products</h2>
-          <ul class="menu-bar__content-list">
-            <li class="menu-bar-content__item">
-              <div class="menu-bar__content-header">
-                <a href="#" class="wrapper">
-                  <span
-                    class="media-icon feature__icon list-icon__container--primary"
-                  >
-                    <svg class="icon">
-                      <use href="/images/icons/list-exchange.svg#ex"></use>
-                    </svg>
-                  </span>
-                  <span class="menu-bar__content-description">
-                    <h3>Exchange</h3>
-                    <p>Professional trading</p>
-                  </span>
-                </a>
-                <svg class="icon toggler">
-                  <use href="/images/icons/chevron-down.svg#chev"></use>
-                </svg>
-              </div>
-              <ul class="collapsible-content exchange-content__list">
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Fees</a></li>
-                <li><a href="#">Markets</a></li>
-                <li><a href="#">Prime</a></li>
-                <li><a href="#">Affiliate</a></li>
-                <li><a href="#">API</a></li>
-                <li><a href="#">View Exchange</a></li>
-              </ul>
-            </li>
-            <li class="menu-bar-content__item">
-              <div class="menu-bar__content-header">
-                <a href="#" class="wrapper">
-                  <span
-                    class="media-icon feature__icon list-icon__container--secondary"
-                  >
-                    <svg class="icon">
-                      <use href="/images/icons/list-wallet.svg#wallet"></use>
-                    </svg>
-                  </span>
-                  <span class="menu-bar__content-description">
-                    <h3>Wallet</h3>
-                    <p>Buy & Sell Crypto</p>
-                  </span>
-                </a>
-              </div>
-            </li>
-            <li class="menu-bar-content__item">
-              <div class="menu-bar__content-header">
-                <a href="#" class="wrapper">
-                  <span
-                    class="media-icon feature__icon list-icon__container--accent"
-                  >
-                    <svg class="icon">
-                      <use href="/images/icons/list-explore.svg#exp"></use>
-                    </svg>
-                  </span>
-                  <span class="menu-bar__content-description">
-                    <h3>Explorer</h3>
-                    <p>Live Data, Charts & Transactions</p>
-                  </span>
-                </a>
-              </div>
-            </li>
-            <li class="menu-bar-content__item">
-              <div class="menu-bar__content-header">
-                <a href="#" class="wrapper">
-                  <span
-                    class="media-icon feature__icon list-icon__container--green"
-                  >
-                    <svg class="icon">
-                      <use href="/images/icons/list-pay.svg#pay"></use>
-                    </svg>
-                  </span>
-                  <span class="menu-bar__content-description">
-                    <h3>Pay</h3>
-                    <p>On-ramp for your users in your app</p>
-                  </span>
-                </a>
-              </div>
-            </li>
-            <li class="menu-bar-content__item">
-              <div class="menu-bar__content-header">
-                <a href="#" class="wrapper">
-                  <span
-                    class="media-icon feature__icon list-icon__container--dark"
-                  >
-                    <svg class="icon">
-                      <use
-                        href="./images/icons/list-institution.svg#inst"
-                      ></use>
-                    </svg>
-                  </span>
-                  <span class="menu-bar__content-description">
-                    <h3>Institutional</h3>
-                    <p>Full-stack crypto service platform</p>
-                  </span>
-                </a>
-              </div>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2 class="menu-bar__list-title">Resources</h2>
-          <ul class="service-list">
-            <li class="service-list__item"><a href="#">APIs</a></li>
-            <li class="service-list__item"><a href="#">Status</a></li>
-            <li class="service-list__item"><a href="#">Open Source</a></li>
-            <li class="service-list__item"><a href="#">Research</a></li>
-            <li class="service-list__item">
-              <a href="#">Legal & Privacy</a>
-            </li>
-            <li class="service-list__item"><a href="#">Support</a></li>
-            <li class="service-list__item"><a href="#">Blog</a></li>
-            <li class="service-list__item"><a href="#">Security</a></li>
-            <li class="service-list__item"><a href="#">Podcast</a></li>
-          </ul>
-        </section>
-        <section>
-          <h2 class="menu-bar__list-title">Company</h2>
-          <ul class="service-list about-us">
-            <li class="service-list__item"><a href="#">About</a></li>
-            <li class="service-list__item"><a href="#">Careers</a></li>
-            <li class="service-list__item"><a href="#">Press Center</a></li>
-            <li class="service-list__item"><a href="#">Prime</a></li>
-            <li class="service-list__item"><a href="#">Ventures</a></li>
-          </ul>
-          <div class="menu-bar__list-title border"></div>
-        </section>
-      </section>
-      <footer class="login-bar">
-        <button class="btn btn--outline btn--login">Log in</button>
-        <button class="btn media-btn btn--sign-up btn--primary">Sign up</button>
-      </footer>
-    </div>
+      </div>
+      <div class="footer__section">
+        <div class="qr-img">
+          <img
+            src="./images/home/sites/QR_code_for_mobile.png"
+            alt="a scannable qr image"
+          />
+          <p>Scan to Download</p>
+        </div>
+        <div class="list-container">
+          <div class="collapsible footer__list-wrapper">
+            <h3 class="footer-list__heading">Products</h3>
+            <ul class="collapsible-content footer__list">
+              <li class="footer-list__item"><a href="#">Wallet</a></li>
+              <li class="footer-list__item"><a href="#">Exchange</a></li>
+              <li class="footer-list__item"><a href="#">Explore</a></li>
+              <li class="footer-list__item"><a href="#">Institutional</a></li>
+              <li class="footer-list__item"><a href="#">Earn</a></li>
+              <li class="footer-list__item"><a href="#">Pay</a></li>
+            </ul>
+          </div>
+          <div class="collapsible footer__list-wrapper">
+            <h3 class="footer-list__heading">Resources</h3>
+            <ul class="collapsible-content footer__list">
+              <li class="footer-list__item"><a href="#">APIs</a></li>
+              <li class="footer-list__item"><a href="#">Blog</a></li>
+              <li class="footer-list__item"><a href="#">Podcast</a></li>
+              <li class="footer-list__item"><a href="#">BitCoin Price</a></li>
+              <li class="footer-list__item"><a href="#">Ethereum Price</a></li>
+              <li class="footer-list__item"><a href="#">Solana Price</a></li>
+            </ul>
+          </div>
+          <div class="collapsible footer__list-wrapper">
+            <h3 class="footer-list__heading">Products</h3>
+            <ul class="collapsible-content footer__list">
+              <li class="footer-list__item"><a href="#">About</a></li>
+              <li class="footer-list__item"><a href="#">Careers</a></li>
+              <li class="footer-list__item"><a href="#">Prime</a></li>
+              <li class="footer-list__item"><a href="#">Ventures</a></li>
+              <li class="footer-list__item"><a href="#">Support</a></li>
+              <li class="footer-list__item"><a href="#">Legal & Privacy</a></li>
+            </ul>
+          </div>
+          <div class="collapsible footer__list-wrapper">
+            <h3 class="footer-list__heading">Learn</h3>
+            <ul class="collapsible-content footer__list">
+              <li class="footer-list__item">
+                <a href="#">What is Bitcoin?</a>
+              </li>
+              <li class="footer-list__item">
+                <a href="#">What is crypto wallet?</a>
+              </li>
+              <li class="footer-list__item"><a href="#">What is a DEX?</a></li>
+              <li class="footer-list__item"><a href="#">Learning Portal</a></li>
+            </ul>
+          </div>
+          <div class="collapsible footer__list-wrapper">
+            <h3 class="footer-list__heading">Buying Guides</h3>
+            <ul class="collapsible-content footer__list">
+              <li class="footer-list__item"><a href="#">Buy BTC</a></li>
+              <li class="footer-list__item"><a href="#">Buy ETH</a></li>
+              <li class="footer-list__item"><a href="#">Buy SOL</a></li>
+              <li class="footer-list__item"><a href="#">Buy ZETA</a></li>
+              <li class="footer-list__item"><a href="#">Buy XRP</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="sites-lang-wrapper">
+        <div class="download-sites">
+          <a href="#">
+            <img src="./images/icons/app-store.svg" alt="" />
+          </a>
+          <a href="#">
+            <img src="./images/icons/play-store.svg" alt="" />
+          </a>
+        </div>
+        <div class="social-sites">
+          <a href="#">
+            <img class="img-x" src="images/home/sites/x2.png" alt="" />
+          </a>
+          <a href="#">
+            <img class="img-x" src="images/home/sites/linkedin2.png" alt="" />
+          </a>
+          <a href="#">
+            <img class="img-x" src="images/home/sites/instagram2.png" alt="" />
+          </a>
+          <a href="#">
+            <img class="img-x" src="images/home/sites/facebook2.png" alt="" />
+          </a>
+        </div>
+        <div class="lang-copyright">
+          <div class="lang-select">
+            <svg class="icon">
+              <use href="./images/icons/globe.svg#globe"></use>
+            </svg>
+            <select class="lang-select-dropdown">
+              <option value="eng" selected>English</option>
+              <option value="esp">Español</option>
+              <option value="portu">Português</option>
+              <option value="russ">Русский</option>
+              <option value="turc">Türkçe</option>
+            </select>
+          </div>
+          <div class="copyright">
+            <svg class="icon">
+              <use href="./images/icons/copyright.svg#copy"></use>
+            </svg>
+            <span class="footer-list__item">Blockchain.com</span>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="main.js"></script>
   </body>
 </html>
