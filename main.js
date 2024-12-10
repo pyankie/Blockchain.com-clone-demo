@@ -109,147 +109,210 @@ window.addEventListener("resize", () => {
 });
 
 // ==========================Feature_block=============================
-const featureWindow = document.querySelector(".feature-window");
-const sliderDots = document.querySelectorAll(".slider__dots li");
-const leftArrow = document.querySelector(
-  ".slider-icons__container .arrow--left",
-).parentNode;
-const rightArrow = document.querySelector(
-  ".slider-icons__container .arrow--right",
-).parentNode;
+
 const smallScreen = window.matchMedia("(max-width: 768px)");
+const features = document.querySelectorAll(".feature");
+const getScreenWidth = () => window.innerWidth;
 
-function intiateSlide() {
-  if (!smallScreen.matches) return;
-  const slides = () =>
-    document.querySelectorAll(".feature-window .slider-item");
-  const firstSlideClone = slides()[0].cloneNode(true);
-  const lastSlideClone = slides()[slides().length - 1].cloneNode(true);
+function cleanupSlider(feature) {
+  const featureWindow = feature.querySelector(".feature-window");
+  const slides = feature.querySelectorAll(".feature-window .slider-item");
+  const initialSlides = 4;
 
-  featureWindow.appendChild(firstSlideClone);
-  featureWindow.insertBefore(lastSlideClone, slides()[0]);
-
-  let totalSlides = slides().length;
-  let currentIndex = 1;
-
-  function getSlideWidth() {
-    // return featureWindow.clientWidth;
-    return slides()[0].clientWidth;
+  if (slides.length > initialSlides) {
+    slides[0].remove();
+    slides[slides.length - 1].remove();
   }
 
-  function updateSlidePosition() {
-    const slideWidth = getSlideWidth();
-    featureWindow.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
-  }
+  featureWindow.style.transform = "";
+  featureWindow.classList.remove("transit");
+}
+const thirdFeature = 2;
+function initiateSlider() {
+  const isSmallScreen = getScreenWidth() <= 760;
 
-  updateSlidePosition();
-  updateDots(currentIndex - 1);
+  features.forEach((feature, i) => {
+    if (i === thirdFeature) return;
 
-  window.addEventListener("resize", () => {
-    featureWindow.classList.remove("transit");
+    cleanupSlider(feature);
+
+    if (!isSmallScreen) return;
+
+    const featureWindow = feature.querySelector(".feature-window");
+    const sliderDots = feature.querySelectorAll(".slider__dots li");
+    const leftArrow = feature.querySelector(
+      ".slider-icons__container .arrow--left",
+    ).parentNode;
+    const rightArrow = feature.querySelector(
+      ".slider-icons__container .arrow--right",
+    ).parentNode;
+
+    const slides = () =>
+      feature.querySelectorAll(".feature-window .slider-item");
+
+    const firstSlideClone = slides()[0].cloneNode(true);
+    const lastSlideClone = slides()[slides().length - 1].cloneNode(true);
+
+    featureWindow.appendChild(firstSlideClone);
+    featureWindow.insertBefore(lastSlideClone, slides()[0]);
+
+    let totalSlides = slides().length;
+    let currentIndex = 1;
+    let isTransitioning = false;
+
+    function getSlideWidth() {
+      return slides()[0].clientWidth;
+    }
+
+    function updateSlidePosition() {
+      const slideWidth = getSlideWidth();
+      featureWindow.style.transform = `translateX(${
+        -currentIndex * slideWidth
+      }px)`;
+    }
+
     updateSlidePosition();
-  });
+    updateDots(currentIndex - 1);
 
-  updateDots(currentIndex - 1);
-  function slideWindow(index) {
-    let offset = -index * getSlideWidth();
+    function slideWindow(index) {
+      let offset = -index * getSlideWidth();
 
-    featureWindow.classList.add("transit");
-    featureWindow.style.transform = `translateX(${offset}px)`;
-  }
+      if (isTransitioning) return;
+      isTransitioning = true;
 
-  function updateDots(index) {
-    let dotIndex = index;
-    console.log(`Index: ${index}`);
+      featureWindow.classList.add("transit");
+      featureWindow.style.transform = `translateX(${offset}px)`;
+    }
 
-    if (index === totalSlides - 2) dotIndex = 0;
-    if (index === -1) dotIndex = sliderDots.length - 1;
-    if (index >= 0 && index < sliderDots.length) dotIndex = index;
+    function updateDots(index) {
+      let dotIndex = index;
 
-    sliderDots.forEach((dot, i) => {
-      if (i === dotIndex) dot.classList.add("active-dot");
-      else dot.classList.remove("active-dot");
+      if (index === totalSlides - 2) dotIndex = 0;
+      if (index === -1) dotIndex = sliderDots.length - 1;
+      if (index >= 0 && index < sliderDots.length) dotIndex = index;
+
+      sliderDots.forEach((dot, i) => {
+        if (i === dotIndex) dot.classList.add("active-dot");
+        else dot.classList.remove("active-dot");
+      });
+    }
+
+    sliderDots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        if (isTransitioning) return;
+
+        currentIndex = index + 1;
+        slideWindow(currentIndex);
+        updateDots(index);
+      });
     });
-  }
 
-  sliderDots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      currentIndex = index + 1;
+    featureWindow.addEventListener("transitionend", () => {
+      isTransitioning = false;
+
+      if (currentIndex === totalSlides - 1) {
+        featureWindow.classList.remove("transit");
+        featureWindow.style.transform = `translateX(${-getSlideWidth()}px)`;
+        currentIndex = 1;
+        updateDots(0);
+      } else if (currentIndex === 0) {
+        featureWindow.classList.remove("transit");
+        featureWindow.style.transform = `translateX(-${
+          (totalSlides - 2) * getSlideWidth()
+        }px)`;
+        currentIndex = totalSlides - 2;
+        updateDots(sliderDots.length - 1);
+      }
+    });
+
+    function showNext() {
+      if (isTransitioning) return;
+
+      currentIndex++;
       slideWindow(currentIndex);
-      updateDots(index);
+      updateDots(currentIndex - 1);
+    }
+
+    function showPrev() {
+      if (isTransitioning) return;
+
+      currentIndex--;
+      slideWindow(currentIndex);
+      updateDots(currentIndex - 1);
+    }
+
+    rightArrow.addEventListener("click", showNext);
+    leftArrow.addEventListener("click", showPrev);
+  });
+}
+
+initiateSlider();
+
+let resizeTimer;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    initiateSlider();
+  }, 100);
+});
+
+const extraLargeScreen = window.matchMedia("(min-width: 1200px)");
+
+function queryFeatureDescriptions(feature) {
+  return extraLargeScreen.matches
+    ? feature.querySelectorAll(
+        ".feature__list-container .feature-item__description",
+      )
+    : feature.querySelectorAll(".feature-window .feature-item__description");
+}
+
+function navigateFeatures(feature, index) {
+  const pictures = feature.querySelectorAll(".picture");
+  const featureDescs = queryFeatureDescriptions(feature);
+
+  featureDescs.forEach((featureDesc, i) => {
+    if (index === i) {
+      featureDesc.classList.add("feature__item--active");
+      pictures[i].classList.add("active");
+    } else {
+      featureDesc.classList.remove("feature__item--active");
+      pictures[i].classList.remove("active");
+    }
+  });
+}
+
+function initializeFeatureListeners(features) {
+  features.forEach((feature) => {
+    const featureDescs = queryFeatureDescriptions(feature);
+
+    featureDescs.forEach((featureDesc, i) => {
+      featureDesc.addEventListener("click", () => {
+        navigateFeatures(feature, i);
+      });
     });
   });
-
-  featureWindow.addEventListener("transitionend", () => {
-    if (currentIndex === totalSlides - 1) {
-      featureWindow.classList.remove("transit");
-      featureWindow.style.transform = `translateX(${-getSlideWidth()}px)`;
-      currentIndex = 1;
-      updateDots(0);
-    } else if (currentIndex === 0) {
-      featureWindow.classList.remove("transit");
-      featureWindow.style.transform = `translateX(-${(totalSlides - 2) * getSlideWidth()}px)`;
-      currentIndex = totalSlides - 2;
-      updateDots(sliderDots.length - 1);
-    }
-  });
-  function showNext() {
-    currentIndex++;
-    slideWindow(currentIndex);
-    updateDots(currentIndex - 1);
-  }
-
-  function showPrev() {
-    currentIndex--;
-    slideWindow(currentIndex);
-    updateDots(currentIndex - 1);
-  }
-
-  rightArrow.addEventListener("click", showNext);
-  leftArrow.addEventListener("click", showPrev);
 }
 
-intiateSlide();
+initializeFeatureListeners(features);
 
-const featureList = document.querySelectorAll(".feature-item__description");
-const extratLargeScreen = window.matchMedia("( min-width: 768px )");
-
-const pictures = document.querySelectorAll(".feature .picture");
-function hideInactiveFeature(index) {
-  pictures.forEach((picture, i) => {
-    if (index === i) {
-      picture.classList.add("active");
-    } else {
-      picture.classList.remove("active");
-    }
-  });
-}
-function navigateFeature(index) {
-  if (!extratLargeScreen.matches) return;
-
-  featureList.forEach((feature, i) => {
-    console.log(`Active feature: ${i}`);
-    if (index === i) feature.classList.add("feature__item--active");
-    else feature.classList.remove("feature__item--active");
-  });
-}
-
-featureList.forEach((feature, i) => {
-  feature.addEventListener("click", () => {
-    navigateFeature(i);
-    hideInactiveFeature(i);
-  });
-});
-document.querySelector(".feature").addEventListener("click", (event) => {
-  event.stopPropagation();
+extraLargeScreen.addEventListener("change", () => {
+  initializeFeatureListeners(features);
 });
 
 // ============================Footer=============================
 const footerListHeading = document.querySelectorAll(".footer-list__heading");
 const footerList = document.querySelectorAll(".footer__list-wrapper");
+const footer = document.querySelector(".footer");
+
+const activeFooterItem = () =>
+  footer.querySelector(".footer__list-wrapper.collapsible--expanded");
 
 footerListHeading.forEach((heading, i) => {
   heading.addEventListener("click", () => {
+    const activeItem = activeFooterItem();
+    if (activeItem && activeItem !== footerList[i])
+      activeItem.classList.remove("collapsible--expanded");
+
     footerList[i].classList.toggle("collapsible--expanded");
   });
 });

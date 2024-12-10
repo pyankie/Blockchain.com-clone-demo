@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Document</title>
+    <link rel="icon" href="./images/icons/favicon.ico" type="image/x-icon" />
+    <title>Blockchain.com | Be early to the future of finance</title>
   </head>
-  <body style="">
+  <body>
     <header class="header">
       <nav class="nav">
         <ul class="nav-page__list">
@@ -125,11 +126,12 @@
         </ul>
         <ul class="nav__icons">
           <li class="nav__search">
-            <a href="#"
-              ><span class="icon-container"
+            <span class="nav-search-icon">
+              <span class="icon-container"
                 ><svg class="icon nav__icon-search">
-                  <use href="/images/icons/search.svg#search"></use></svg></span
-            ></a>
+                  <use href="/images/icons/search.svg#search"></use></svg
+              ></span>
+            </span>
             <div class="searchables">
               <div class="search-block">
                 <div class="search-input-wrapper">
@@ -201,29 +203,61 @@
         <svg class="nav__brand">
           <use href="images/icons/logo-text.svg#logo"></use>
         </svg>
-        <div class="separator-line"></div>
-        <div class="social-sites">
-          <a href="#">
-            <img class="img-x" src="images/home/sites/x2.png" alt="" />
-          </a>
-          <a href="#">
-            <img class="img-x" src="images/home/sites/linkedin2.png" alt="" />
-          </a>
-          <a href="#">
-            <img class="img-x" src="images/home/sites/instagram2.png" alt="" />
-          </a>
-          <a href="#">
-            <img class="img-x" src="images/home/sites/facebook2.png" alt="" />
-          </a>
-        </div>
+        <svg class="nav-menu__close-icon">
+          <use href="images/icons/exit-x-icon.svg#x"></use>
+        </svg>
       </div>
-      <div class="footer__section">
-        <div class="qr-img">
-          <img
-            src="./images/home/sites/QR_code_for_mobile.png"
-            alt="a scannable qr image"
-          />
-          <p>Scan to Download</p>
+      <section class="menu-bar__content-container">
+        <div class="search-block-container">
+          <section class="collapsible search-block menu">
+            <div class="search-input-wrapper">
+              <svg class="search-icon">
+                <use href="images/icons/search.svg#search"></use>
+              </svg>
+              <input
+                class="input"
+                type="text"
+                placeholder="Search blocks, transactions, hash..."
+              />
+            </div>
+            <div class="block__list-wrapper collapsible-content">
+              <ul class="block__list">
+                <h4 class="block__list-heading">Blocks</h4>
+                <li class="search-item">
+                  <a href="#" class="search-item__link">
+                    <svg class="block-icon">
+                      <use href="images/icons/block.svg#block"></use>
+                    </svg>
+                    BTC Block
+                  </a>
+                </li>
+                <li class="search-item">
+                  <a href="#" class="search-item__link">
+                    <svg class="block-icon">
+                      <use href="images/icons/block.svg#block"></use>
+                    </svg>
+                    BCH Block
+                  </a>
+                </li>
+                <li class="search-item">
+                  <a href="#" class="search-item__link">
+                    <svg class="block-icon">
+                      <use href="images/icons/block.svg#block"></use>
+                    </svg>
+                    ETH Block
+                  </a>
+                </li>
+              </ul>
+              <ul class="searchable-list">
+                <li><a class="searchable__item" href="#">Prices</a></li>
+                <li><a class="searchable__item" href="#">Blocks</a></li>
+                <li>
+                  <a class="searchable__item" href="#">Transactions</a>
+                </li>
+                <li><a class="searchable__item" href="#">Charts</a></li>
+              </ul>
+            </div>
+          </section>
         </div>
         <section class="collapsible menu-bar__content">
           <h2 class="menu-bar__list-title">Products</h2>
@@ -461,7 +495,7 @@
       </div>
     </section>
     <section class="feature-wrapper">
-      <article class="feature">
+      <article class="feature" data-feature-id="1">
         <div class="feature__content">
           <span
             class="media-icon feature__icon"
@@ -530,13 +564,13 @@
                   <source
                     type="image/png"
                     srcset="
-                      images/home/app-earn-rewards.png    1x,
-                      images/home/app-earn-rewards@2x.png 2x
+                      ./images/home/app-ease.png    1x,
+                      ./images/home/app-ease@2x.png 2x
                     "
                   />
                   <img
                     class="feature__image"
-                    src="./images/home/app-earn-rewards.png"
+                    src="./images/home/app-ease@2x.png"
                     alt=""
                   />
                 </picture>
@@ -557,13 +591,13 @@
                   <source
                     type="image/png"
                     srcset="
-                      ./images/home/app-connect-defi.png    1x,
-                      ./images/home/app-connect-defi@2x.png 2x
+                      ./images/home/app-earn-rewards.png    1x,
+                      ./images/home/app-earn-rewards@2x.png 2x
                     "
                   />
                   <img
                     class="feature__image"
-                    src="./images/home/app-connect-defi.png"
+                    src="./images/home/app-earn-rewards@2x.png"
                     alt=""
                   />
                 </picture>
@@ -584,13 +618,13 @@
                   <source
                     type="image/png"
                     srcset="
-                      ./images/home/app-ease.png  1x,
-                      images/home/app-ease@2x.png 2x
+                      ./images/home/app-self-custody.png    1x,
+                      ./images/home/app-self-custody@2x.png 2x
                     "
                   />
                   <img
                     class="feature__image"
-                    src="./images/home/app-ease.png"
+                    src="./images/home/app-self-custody@2x.png"
                     alt=""
                   />
                 </picture>
@@ -609,13 +643,13 @@
                   <source
                     type="image/png"
                     srcset="
-                      ./images/home/app-ease.png  1x,
-                      images/home/app-ease@2x.png 2x
+                      ./images/home/app-connect-defi.png    1x,
+                      ./images/home/app-connect-defi@2x.png 2x
                     "
                   />
                   <img
                     class="feature__image"
-                    src="./images/home/app-ease.png"
+                    src="images/home/app-connect-defi@2x.png"
                     alt=""
                   />
                 </picture>
@@ -652,7 +686,551 @@
         </div>
         <button class="btn media-btn btn--secondary">Get started</button>
       </article>
+      <article class="feature" data-feature-id="2">
+        <div class="feature__content">
+          <span
+            class="media-icon feature__icon"
+            style="color: var(--color--secondary); background: #ecf5fe"
+          >
+            <svg class="icon">
+              <use href="/images/icons/list-exchange.svg#ex"></use>
+            </svg>
+            <p class="media-icon__title">Exchange</p>
+          </span>
+          <h2 class="feature__heading">Lightning-fast crypto trading</h2>
+          <div class="feature-window">
+            <div class="slider-item">
+              <div class="slider-image">
+                <picture class="picture active">
+                  <source
+                    type="image/png"
+                    srcset="
+                      ./images/home/prod-exchange-fiat-currencies.png    1x,
+                      ./images/home/prod-exchange-fiat-currencies@2x.png 2x
+                    "
+                  />
+                  <img
+                    class="feature__image"
+                    src="./images/home/prod-exchange-fiat-currencies@2x.png"
+                    alt=""
+                  />
+                </picture>
+              </div>
+              <div class="feature-item__description feature__item--active">
+                <h3 class="feature-list__heading">
+                  Trade in 3 fiat currencies
+                </h3>
+                <p class="feature-list__detail">
+                  The Exchange supports USD, EUR, and GBR.
+                </p>
+              </div>
+            </div>
+            <div class="slider-item">
+              <div class="slider-image">
+                <picture class="picture">
+                  <source
+                    type="image/png"
+                    srcset="
+                      ./images/home/prod-exchange-matching-engine.png    1x,
+                      ./images/home/prod-exchange-matching-engine@2x.png 2x
+                    "
+                  />
+                  <img
+                    class="feature__image"
+                    src="./images/home/prod-exchange-matching-engine@2x.png"
+                    alt=""
+                  />
+                </picture>
+              </div>
+              <div class="feature-item__description">
+                <h3 class="feature-list__heading">
+                  A matching engine that can keep up with you
+                </h3>
+                <p class="feature-list__detail">
+                  The world’s fastest crypto matching engine, built by and for
+                  traders.
+                </p>
+              </div>
+            </div>
+            <div class="slider-item">
+              <div class="slider-image">
+                <picture class="picture">
+                  <source
+                    type="image/png"
+                    srcset="
+                      ./images/home/prod-exchange-chat-support.png    1x,
+                      ./images/home/prod-exchange-chat-support@2x.png 2x
+                    "
+                  />
+                  <img
+                    class="feature__image"
+                    src="./images/home/prod-exchange-chat-support@2x.png"
+                    alt=""
+                  />
+                </picture>
+              </div>
+              <div class="feature-item__description">
+                <h3 class="feature-list__heading">24/7 live chat support</h3>
+                <p class="feature-list__detail">
+                  Chat with customer support directly in the Exchange, anytime.
+                </p>
+              </div>
+            </div>
+            <div class="slider-item">
+              <div class="slider-image">
+                <picture class="picture">
+                  <source
+                    type="image/png"
+                    srcset="
+                      ./images/home/ex-landing-margin-image.png    1x,
+                      ./images/home/ex-landing-margin-image@2x.png 2x
+                    "
+                  />
+                  <img
+                    class="feature__image"
+                    src="./images/home/ex-landing-margin-image@2x.png"
+                    alt=""
+                  />
+                </picture>
+              </div>
+              <div class="feature-item__description">
+                <h3 class="feature-list__heading">Margin Trading</h3>
+                <p class="feature-list__detail">
+                  Integrated margin trading tools
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="feature__list-container">
+            <span
+              class="media-icon feature__icon"
+              style="color: var(--color--secondary); background: #ecf5fe"
+            >
+              <svg class="icon">
+                <use href="/images/icons/list-exchange.svg#ex"></use>
+              </svg>
+              <p class="media-icon__title">Exchange</p>
+            </span>
+            <h2 class="feature__heading">lightning-fast crypto trading</h2>
+            <ul class="feature__list">
+              <li class="feature-item__description feature__item--active">
+                <h3 class="feature-list__heading">
+                  Trade in 3 fiat currencies
+                </h3>
+                <p class="feature-list__detail">
+                  The Exchange supports USD, EUR, and GBP.
+                </p>
+              </li>
+              <li class="feature-item__description">
+                <h3 class="feature-list__heading">
+                  A matching engine that can keep up with you
+                </h3>
+                <p class="feature-list__detail">
+                  The world’s fastest crypto matching engine, built by and for
+                  traders.
+                </p>
+              </li>
+              <li class="feature-item__description">
+                <h3 class="feature-list__heading">24/7 live chat support</h3>
+                <p class="feature-list__detail">
+                  Chat with customer support directly in the Exchange, anytime.
+                </p>
+              </li>
+              <li class="feature-item__description">
+                <h3 class="feature-list__heading">Margin Trading</h3>
+                <p class="feature-list__detail">
+                  Integrated margin trading tools
+                </p>
+              </li>
+            </ul>
+            <button class="btn media-btn btn--primary">Trade Now</button>
+          </div>
+          <div class="navigator">
+            <span class="slider-icons__container">
+              <span class="slider-icon slider-icon-secondary">
+                <svg class="arrow--left">
+                  <use href="images/icons/arrow.svg#arrow"></use>
+                </svg>
+              </span>
+              <span class="slider-icon slider-icon-secondary">
+                <svg class="arrow--right">
+                  <use href="images/icons/arrow.svg#arrow"></use>
+                </svg>
+              </span>
+            </span>
+            <ul class="slider__dots">
+              <li class="active-dot"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <button class="btn media-btn btn--primary">Trade Now</button>
+      </article>
+      <article class="feature" data-feature-id="3">
+        <div class="feature__content">
+          <span
+            class="media-icon feature__icon"
+            style="color: #677185; background: #dfe3eb"
+          >
+            <svg class="icon">
+              <use href="./images/icons/institution.svg#inst"></use>
+            </svg>
+            <p class="media-icon__title">Institutional</p>
+          </span>
+          <h2 class="feature__heading">
+            High-touch crypto solutions for institutions
+          </h2>
+          <p class="feature__description">
+            Spot OTC, derivatives, structured products, and margin lending.
+          </p>
+          <div class="feature__list-container">
+            <span
+              class="media-icon feature__icon"
+              style="color: #677185; background: #dfe3eb"
+            >
+              <svg class="icon">
+                <use href="./images/icons/institution.svg#inst"></use>
+              </svg>
+              <p class="media-icon__title">Institutional</p>
+            </span>
+            <h2 class="feature__heading">
+              High-touch crypto solutions for institutions
+            </h2>
+            <p class="feature__description">
+              Spot OTC, derivatives, structured products, and margin lending.
+            </p>
+            <button class="btn media-btn btn--dark">Become a Client</button>
+          </div>
+        </div>
+        <button class="btn media-btn btn--dark">Become a client</button>
+      </article>
+      <article class="feature" data-feature-id="4">
+        <div class="feature__content">
+          <span
+            class="media-icon feature__icon"
+            style="color: var(--color-accent); background: #fff2e5"
+          >
+            <svg class="icon">
+              <use href="./images/icons/list-explore.svg#exp"></use>
+            </svg>
+            <p class="media-icon__title">Explore</p>
+          </span>
+
+          <h2 class="feature__heading">Blockchain data is in our DNA</h2>
+          <div class="feature__list-container">
+            <span
+              class="media-icon feature__icon"
+              style="color: var(--color-accent); background: #fff2e5"
+            >
+              <svg class="icon">
+                <use href="./images/icons/list-explore.svg#exp"></use>
+              </svg>
+              <p class="media-icon__title">Explore</p>
+            </span>
+            <h2 class="feature__heading">Blockchain data is in our DNA</h2>
+            <ul class="feature__list">
+              <li class="feature-item__description feature__item--active">
+                <h3 class="feature-list__heading">
+                  Explore the top blockchains
+                </h3>
+                <p class="feature-list__detail">
+                  Confirm transactions, analyze the market, or simply learn more
+                  about crypto.
+                </p>
+              </li>
+              <li class="feature-item__description">
+                <h3 class="feature-list__heading">
+                  Powerful Blockchain Data API
+                </h3>
+                <p class="feature-list__detail">
+                  We’ve powered exchanges, data analysts, enthusiasts, and more.
+                </p>
+              </li>
+              <li class="feature-item__description">
+                <h3 class="feature-list__heading">Industry leading charts</h3>
+                <p class="feature-list__detail">
+                  From hashrate, to block details, to mining information, and
+                  more.
+                </p>
+              </li>
+              <li class="feature-item__description">
+                <h3 class="feature-list__heading">Real-time crypto prices</h3>
+                <p class="feature-list__detail">
+                  Get the latest prices and charts along with key market
+                  signals.
+                </p>
+              </li>
+            </ul>
+            <button class="btn media-btn btn--accent">Explore now</button>
+          </div>
+          <div class="feature-window">
+            <div class="slider-item">
+              <div class="slider-image">
+                <picture class="picture active">
+                  <source
+                    type="image/png"
+                    srcset="
+                      ./images/home/prod-explore-blockchains.png    1x,
+                      ./images/home/prod-explore-blockchains@2x.png 2x
+                    "
+                  />
+                  <img
+                    class="feature__image"
+                    src="./images/home/prod-explore-blockchains@2x.png"
+                    alt=""
+                  />
+                </picture>
+              </div>
+              <div class="feature-item__description feature__item--active">
+                <h3 class="feature-list__heading">
+                  Explore the top blockchains
+                </h3>
+                <p class="feature-list__detail">
+                  Confirm transactions, analyze the market, or simply learn more
+                  about crypto.
+                </p>
+              </div>
+            </div>
+            <div class="slider-item">
+              <div class="slider-image">
+                <picture class="picture">
+                  <source
+                    type="image/png"
+                    srcset="
+                      ./images/home/prod-explore-api.png    1x,
+                      ./images/home/prod-explore-api@2x.png 2x
+                    "
+                  />
+                  <img
+                    class="feature__image"
+                    src="./images/home/prod-explore-api@2x.png"
+                    alt=""
+                  />
+                </picture>
+              </div>
+              <div class="feature-item__description">
+                <h3 class="feature-list__heading">
+                  Powerful Blockchain Data API
+                </h3>
+                <p class="feature-list__detail">
+                  We’ve powered exchanges, data analysts, enthusiasts, and more.
+                </p>
+              </div>
+            </div>
+            <div class="slider-item">
+              <div class="slider-image">
+                <picture class="picture">
+                  <source
+                    type="image/png"
+                    srcset="
+                      ./images/home/prod-explore-charts.png    1x,
+                      ./images/home/prod-explore-charts@2x.png 2x
+                    "
+                  />
+                  <img
+                    class="feature__image"
+                    src="./images/home/prod-explore-charts@2x.png"
+                    alt=""
+                  />
+                </picture>
+              </div>
+              <div class="feature-item__description">
+                <h3 class="feature-list__heading">Industry leading charts</h3>
+                <p class="feature-list__detail">
+                  From hashrate, to block details, to mining information, and
+                  more.
+                </p>
+              </div>
+            </div>
+            <div class="slider-item">
+              <div class="slider-image">
+                <picture class="picture">
+                  <source
+                    type="image/png"
+                    srcset="
+                      ./images/home/prod-explore-prices.png    1x,
+                      ./images/home/prod-explore-prices@2x.png 2x
+                    "
+                  />
+                  <img
+                    class="feature__image"
+                    src="./images/home/prod-explore-prices@2x.png"
+                    alt=""
+                  />
+                </picture>
+              </div>
+              <div class="feature-item__description">
+                <h3 class="feature-list__heading">Real-time crypto prices</h3>
+                <p class="feature-list__detail">
+                  Get the latest prices and charts along with key market
+                  signals.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="navigator">
+            <span class="slider-icons__container">
+              <span class="slider-icon slider-icon--accent">
+                <svg class="arrow--left">
+                  <use href="images/icons/arrow.svg#arrow"></use>
+                </svg>
+              </span>
+              <span class="slider-icon slider-icon--accent">
+                <svg class="arrow--right">
+                  <use href="images/icons/arrow.svg#arrow"></use>
+                </svg>
+              </span>
+            </span>
+            <ul class="slider__dots">
+              <li class="active-dot"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <button class="btn media-btn btn--accent">Explore now</button>
+      </article>
     </section>
+    <section class="callout">
+      <h2 class="callout__heading">Let us take you from zero to crypto</h2>
+      <button class="btn media-btn">Get started</button>
+    </section>
+    <footer class="footer">
+      <div class="sites">
+        <svg class="nav__brand sites__brand-logo">
+          <use href="./images/icons/logo-text.svg#logo"></use>
+        </svg>
+        <div class="separator-line"></div>
+        <div class="social-sites">
+          <a href="#">
+            <img class="img-x" src="images/home/sites/x2.png" alt="" />
+          </a>
+          <a href="#">
+            <img class="img-x" src="images/home/sites/linkedin2.png" alt="" />
+          </a>
+          <a href="#">
+            <img class="img-x" src="images/home/sites/instagram2.png" alt="" />
+          </a>
+          <a href="#">
+            <img class="img-x" src="images/home/sites/facebook2.png" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="footer__section">
+        <div class="qr-img">
+          <img
+            src="./images/home/sites/QR_code_for_mobile.png"
+            alt="a scannable qr image"
+          />
+          <p>Scan to Download</p>
+        </div>
+        <div class="list-container">
+          <div class="collapsible footer__list-wrapper">
+            <h3 class="footer-list__heading">Products</h3>
+            <ul class="collapsible-content footer__list">
+              <li class="footer-list__item"><a href="#">Wallet</a></li>
+              <li class="footer-list__item"><a href="#">Exchange</a></li>
+              <li class="footer-list__item"><a href="#">Explore</a></li>
+              <li class="footer-list__item"><a href="#">Institutional</a></li>
+              <li class="footer-list__item"><a href="#">Earn</a></li>
+              <li class="footer-list__item"><a href="#">Pay</a></li>
+            </ul>
+          </div>
+          <div class="collapsible footer__list-wrapper">
+            <h3 class="footer-list__heading">Resources</h3>
+            <ul class="collapsible-content footer__list">
+              <li class="footer-list__item"><a href="#">APIs</a></li>
+              <li class="footer-list__item"><a href="#">Blog</a></li>
+              <li class="footer-list__item"><a href="#">Podcast</a></li>
+              <li class="footer-list__item"><a href="#">BitCoin Price</a></li>
+              <li class="footer-list__item"><a href="#">Ethereum Price</a></li>
+              <li class="footer-list__item"><a href="#">Solana Price</a></li>
+            </ul>
+          </div>
+          <div class="collapsible footer__list-wrapper">
+            <h3 class="footer-list__heading">Products</h3>
+            <ul class="collapsible-content footer__list">
+              <li class="footer-list__item"><a href="#">About</a></li>
+              <li class="footer-list__item"><a href="#">Careers</a></li>
+              <li class="footer-list__item"><a href="#">Prime</a></li>
+              <li class="footer-list__item"><a href="#">Ventures</a></li>
+              <li class="footer-list__item"><a href="#">Support</a></li>
+              <li class="footer-list__item"><a href="#">Legal & Privacy</a></li>
+            </ul>
+          </div>
+          <div class="collapsible footer__list-wrapper">
+            <h3 class="footer-list__heading">Learn</h3>
+            <ul class="collapsible-content footer__list">
+              <li class="footer-list__item">
+                <a href="#">What is Bitcoin?</a>
+              </li>
+              <li class="footer-list__item">
+                <a href="#">What is crypto wallet?</a>
+              </li>
+              <li class="footer-list__item"><a href="#">What is a DEX?</a></li>
+              <li class="footer-list__item"><a href="#">Learning Portal</a></li>
+            </ul>
+          </div>
+          <div class="collapsible footer__list-wrapper">
+            <h3 class="footer-list__heading">Buying Guides</h3>
+            <ul class="collapsible-content footer__list">
+              <li class="footer-list__item"><a href="#">Buy BTC</a></li>
+              <li class="footer-list__item"><a href="#">Buy ETH</a></li>
+              <li class="footer-list__item"><a href="#">Buy SOL</a></li>
+              <li class="footer-list__item"><a href="#">Buy ZETA</a></li>
+              <li class="footer-list__item"><a href="#">Buy XRP</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="sites-lang-wrapper">
+        <div class="download-sites">
+          <a href="#">
+            <img src="./images/icons/app-store.svg" alt="" />
+          </a>
+          <a href="#">
+            <img src="./images/icons/play-store.svg" alt="" />
+          </a>
+        </div>
+        <div class="social-sites">
+          <a href="#">
+            <img class="img-x" src="images/home/sites/x2.png" alt="" />
+          </a>
+          <a href="#">
+            <img class="img-x" src="images/home/sites/linkedin2.png" alt="" />
+          </a>
+          <a href="#">
+            <img class="img-x" src="images/home/sites/instagram2.png" alt="" />
+          </a>
+          <a href="#">
+            <img class="img-x" src="images/home/sites/facebook2.png" alt="" />
+          </a>
+        </div>
+        <div class="lang-copyright">
+          <div class="lang-select">
+            <svg class="icon">
+              <use href="./images/icons/globe.svg#globe"></use>
+            </svg>
+            <select class="lang-select-dropdown">
+              <option value="eng" selected>English</option>
+              <option value="esp">Español</option>
+              <option value="portu">Português</option>
+              <option value="russ">Русский</option>
+              <option value="turc">Türkçe</option>
+            </select>
+          </div>
+          <div class="copyright">
+            <svg class="icon">
+              <use href="./images/icons/copyright.svg#copy"></use>
+            </svg>
+            <span class="footer-list__item">Blockchain.com</span>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="main.js"></script>
   </body>
 </html>
