@@ -386,7 +386,7 @@ a {
 
 .card__description {
   font-weight: 500;
-  margin-top: 2rem;
+  margin-top: 0.4rem;
 }
 .crypto-name > abbr {
   text-transform: uppercase;
@@ -417,8 +417,8 @@ a {
 }
 .feature {
   background: image-set(
-      url(/images/home/homepage-app-shapes-bg.png) 1x,
-      url(/images/home/homepage-app-shapes-bg@2x.png) 2x
+      url(../images/home/homepage-app-shapes-bg.png) 1x,
+      url(../images/home/homepage-app-shapes-bg@2x.png) 2x
     )
     #f7f5fe no-repeat;
   background-position: right top 18rem;
@@ -431,8 +431,8 @@ a {
 }
 .feature:nth-of-type(2) {
   background: image-set(
-      url(/images/home/homepage-exchange-shapes-bg.png) 1x,
-      url(/images/home/homepage-exchange-shapes-bg@2x.png) 2x
+      url(../images/home/homepage-exchange-shapes-bg.png) 1x,
+      url(../images/home/homepage-exchange-shapes-bg@2x.png) 2x
     )
     #ecf5fe80 no-repeat;
   color: #0c6cf2;
@@ -441,8 +441,8 @@ a {
 }
 .feature:nth-of-type(3) {
   background: image-set(
-      url(/images/home/homepage-institutional-shapes-bg.png) 1x,
-      url(/images/home/homepage-institutional-shapes-bg@2x.png) 2x
+      url(../images/home/homepage-institutional-shapes-bg.png) 1x,
+      url(../images/home/homepage-institutional-shapes-bg@2x.png) 2x
     )
     #f0f2f7 no-repeat;
   color: #121d33;
@@ -452,8 +452,8 @@ a {
 }
 .feature:nth-of-type(4) {
   background: image-set(
-      url(/images/home/homepage-explorer-shapes-bg.png) 1x,
-      url(/images/home/homepage-explorer-shapes-bg@2x.png) 2x
+      url(../images/home/homepage-explorer-shapes-bg.png) 1x,
+      url(../images/home/homepage-explorer-shapes-bg@2x.png) 2x
     )
     #fff2e580 no-repeat;
   color: var(--color-accent);
@@ -600,7 +600,7 @@ a {
     line-height: 2.4rem;
   }
   .feature-wrapper {
-    padding: 12rem 4rem 0;
+    padding: 0 4rem 0;
     margin-bottom: 6rem;
   }
   .feature__content {
@@ -858,7 +858,8 @@ a {
 
 /* Call-out section */
 .callout {
-  background: url(/images/icons/banner-bg.svg) var(--color-dark) no-repeat left;
+  background: url(../images/icons/banner-bg.svg) var(--color-dark) no-repeat
+    left;
   color: #fff;
   padding: 4rem 1.6rem;
   display: flex;
@@ -907,7 +908,7 @@ a {
   outline: 2px solid transparent;
   border: none;
   appearance: none;
-  background: url(/images/icons/chevron-down.svg) no-repeat right 15px center;
+  background: url(../images/icons/chevron-down.svg) no-repeat right 15px center;
   padding: 1rem 3rem 1rem 2px;
   cursor: pointer;
   border-radius: 8px;
@@ -1204,7 +1205,7 @@ a {
 .exchange-content__list li:nth-last-of-type(1) a::after,
 .exchange-content__list li:nth-last-of-type(2) a::after {
   display: inline-block;
-  content: url("../images/icons/arrow.svg#arrow");
+  content: url(../images/icons/arrow.svg#arrow);
   position: relative;
   vertical-align: middle;
   left: 6px;
@@ -1488,7 +1489,7 @@ a {
   position: absolute;
   top: 4px;
   right: 8px;
-  content: url(/images/icons/chevron-down.svg);
+  content: url(../images/icons/chevron-down.svg);
   transform: translateX(-50%) rotate(-90deg);
   transition: all 0.2s ease;
   opacity: 0;
@@ -1532,7 +1533,8 @@ a {
 }
 .hero-wrapper {
   padding: 0 1.6rem;
-  background: url(/images/home/home-hero-gradient.jpg) no-repeat;
+  background: url(../images/home/home-hero-gradient.jpg);
+  background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
 }
@@ -1540,7 +1542,7 @@ a {
   display: flex;
   flex-direction: column;
   color: #fff;
-  padding: 12rem 0 8rem;
+  padding: 18.8rem 0 8rem;
 }
 .hero__heading {
   margin: 0;
@@ -1562,7 +1564,7 @@ a {
     padding: 0 4rem;
   }
   .hero {
-    padding: 17rem 0;
+    padding: 24rem 0 14rem;
   }
   .hero__heading {
     line-height: 5.8rem;
@@ -1578,10 +1580,11 @@ a {
 .crypto-prices-container {
   position: relative;
   max-width: 108rem;
-  margin-bottom: 28rem;
+  margin-bottom: 2rem;
 }
+
 .crypto-prices-wrapper {
-  position: absolute;
+  position: relative;
   top: -4rem;
   left: 0;
   right: 0;
@@ -1616,6 +1619,9 @@ a {
   top: 0;
 }
 @media screen and (min-width: 768px) {
+  .crypto-prices-container {
+    margin-bottom: 0rem;
+  }
   .crypto-prices__list .card {
     max-width: 100%;
   }
@@ -1625,11 +1631,10 @@ a {
     gap: 2.4rem;
     grid-template-columns: repeat(auto-fit, minmax(19.2rem, 1fr));
     overflow: hidden;
-    padding: 0 4rem 8rem;
-    padding-right: 6rem;
+    padding: 0 4.8rem 6rem;
   }
   .more-prices-link {
-    bottom: 4rem;
+    bottom: 2rem;
     left: 4rem;
   }
 }
@@ -1697,7 +1702,7 @@ a {
 }
 .footer-list__heading::after {
   position: absolute;
-  content: url(/images/icons/chevron-down-bold.svg);
+  content: url(../images/icons/chevron-down-bold.svg);
   right: 0;
   transition: transform 0.3s ease-in;
   transform-origin: center center 0;
@@ -1744,11 +1749,10 @@ a {
   display: flex;
   align-items: center;
 }
-.lang-select .icon {
-  transform: translateY(4px);
-}
 .lang-select .icon,
 .copyright .icon {
+  width: 24px;
+  height: 24px;
   cursor: auto;
   margin-right: 1.2rem;
 }
