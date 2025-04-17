@@ -58,7 +58,7 @@ This project is a front-end clone of the Blockchain.com landing page. I built it
 
 ### BrowserSync Configuration
 
-The project includes a `browser-sync.config.js` file for config:
+The project includes a `bs-config.js` file for config:
 
 ```javascript
 module.exports = {
