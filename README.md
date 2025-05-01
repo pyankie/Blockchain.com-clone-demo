@@ -149,7 +149,6 @@ This config enables a local server, watches for changes in HTML, CSS, and JavaSc
 ├── main.js
 └── package.json
 ```
-``
 ## Contributions
 
 - Designed and developed the landing page from scratch and replicated Blockchain.com’s look and feel.
@@ -159,4 +158,4 @@ This config enables a local server, watches for changes in HTML, CSS, and JavaSc
 
 ## Contact
 
-For questions or feedback, reach out to [pyankie] at [[zpyankie@gmail.com](mailto:zpyankie@gmail.com].
+zpyankie@gmail.com
